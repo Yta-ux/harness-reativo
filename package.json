@@ -1,0 +1,14 @@
+{
+  "name": "harness-reativo",
+  "private": true,
+  "description": "Harness para agentes de IA em programação reativa (TypeScript + RxJS)",
+  "packageManager": "pnpm@10.24.0",
+  "engines": { "node": ">=20" },
+  "scripts": {
+    "install:all": "pnpm -C harness install && pnpm -C baseline install && pnpm -C tools install",
+    "validate": "pnpm -C harness validate",
+    "verify-harness": "pnpm -C harness verify-harness",
+    "measure:baseline": "pnpm -C tools measure ../baseline",
+    "measure:harness": "pnpm -C tools measure ../harness"
+  }
+}

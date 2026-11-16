@@ -1,0 +1,29 @@
+{
+  "name": "harness-reativo",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "typecheck": "tsc --noEmit",
+    "test": "vitest run",
+    "lint": "eslint src tests --max-warnings 0",
+    "arch": "depcruise src --config .dependency-cruiser.cjs",
+    "validate": "bash scripts/validate.sh",
+    "verify-harness": "bash scripts/verify-harness.sh"
+  },
+  "dependencies": {
+    "rxjs": "7.8.1"
+  },
+  "devDependencies": {
+    "@types/node": "22.10.2",
+    "dependency-cruiser": "16.8.0",
+    "eslint": "9.17.0",
+    "typescript": "5.7.2",
+    "typescript-eslint": "8.18.2",
+    "vitest": "2.1.8"
+  },
+  "packageManager": "pnpm@10.24.0",
+  "engines": {
+    "node": ">=20"
+  }
+}

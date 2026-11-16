@@ -1,0 +1,15 @@
+{
+  "name": "harness-reativo-tools",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "measure": "node measure.mjs"
+  },
+  "devDependencies": {
+    "typescript": "5.7.2"
+  },
+  "packageManager": "pnpm@10.24.0",
+  "engines": {
+    "node": ">=20"
+  }
+}

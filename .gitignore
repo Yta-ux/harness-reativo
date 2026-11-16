@@ -1,0 +1,10 @@
+node_modules
+dist
+coverage
+.vitest-result.json
+.DS_Store
+.env*
+
+# notas pessoais (não fazem parte da entrega)
+CONTEXTO.md
+ROTEIRO.md

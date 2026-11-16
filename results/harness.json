@@ -1,0 +1,43 @@
+{
+  "app": "harness",
+  "typeErrors": 0,
+  "ownTests": {
+    "total": 11,
+    "failed": 0,
+    "passed": 11,
+    "suiteErrors": 0
+  },
+  "acceptance": {
+    "total": 16,
+    "failed": 0,
+    "passed": 16,
+    "suiteErrors": 0
+  },
+  "architectureViolations": 0,
+  "byRule": {
+    "R1": 0,
+    "R2": 0,
+    "R3": 0,
+    "R4": 0,
+    "R5": 0,
+    "R6": 0,
+    "R8": 0,
+    "any": 0,
+    "suppress": 0
+  },
+  "hygiene": {
+    "explicitAny": 0,
+    "suppressions": 0
+  },
+  "details": {
+    "R1": [],
+    "R2": [],
+    "R3": [],
+    "R4": [],
+    "R5": [],
+    "R6": [],
+    "R8": [],
+    "any": [],
+    "suppress": []
+  }
+}
