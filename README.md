@@ -1,7 +1,5 @@
 # Harness para agentes de IA em Programação Reativa
 
-[![CI](../../actions/workflows/ci.yml/badge.svg)](../../actions/workflows/ci.yml)
-
 Projeto da disciplina de Paradigmas de Linguagem de Programação (PLP). Mostra como
 um **harness** (instruções, regras arquiteturais executáveis e um comando de
 validação) guia um agente de IA em um backend **orientado a eventos** escrito em
@@ -18,7 +16,6 @@ TypeScript + RxJS, e **mede** o que muda com e sem harness.
 - [O experimento (com × sem harness)](#o-experimento-com--sem-harness)
 - [Resultados](#resultados)
 - [Limitações](#limitações)
-- [CI](#ci)
 - [Solução de problemas](#solução-de-problemas)
 
 ---
@@ -89,7 +86,6 @@ harness-reativo/
 │   ├── measure.mjs
 │   └── acceptance/feature.test.ts   16 testes de aceitação "ocultos"
 ├── results/                  saída JSON das medições (baseline.json, harness.json)
-├── .github/workflows/ci.yml  CI
 ├── EXPERIMENTO.md            protocolo, prompt e métricas
 └── package.json              atalhos na raiz
 ```
@@ -316,24 +312,12 @@ regressão quando o padrão não está à vista.
 - Um experimento mais forte removeria o exemplo reativo do seed, ou pediria
   features que tentem o atalho imperativo, ou repetiria N vezes.
 
-## CI
-
-`.github/workflows/ci.yml` roda a cada push na `main` e em pull requests:
-
-1. `harness`: `pnpm validate` + `pnpm verify-harness`
-2. `baseline`: `pnpm typecheck` + `pnpm test`
-3. `measure`: árbitro nas duas apps
-
-Usa `pnpm install --frozen-lockfile`, então o `pnpm-lock.yaml` de cada app precisa
-estar commitado e em dia.
-
 ## Solução de problemas
 
 | Sintoma | Causa provável | Correção |
 |---|---|---|
 | `pnpm: command not found` | pnpm não instalado | `corepack enable` ou `npm i -g pnpm` |
 | `Command "tsc" not found` / `vitest not found` | dependências não instaladas naquela pasta | `pnpm install` dentro da pasta (ou `pnpm install:all` na raiz) |
-| `ERR_PNPM_OUTDATED_LOCKFILE` no CI | `package.json` mudou sem atualizar o lock | rode `pnpm install` na pasta e commite o `pnpm-lock.yaml` |
 | `verify-harness` deixa `src/**/bad.ts` | execução interrompida no meio | apague o arquivo plantado (`git status` mostra) |
 | Aviso `Ignored build scripts: esbuild` | política do pnpm 10 | pode ignorar |
 
