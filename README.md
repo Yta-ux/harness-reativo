@@ -1,6 +1,6 @@
 # Harness para agentes de IA em Programação Reativa
 
-Projeto da disciplina de Paradigmas de Linguagem de Programação (PLP). Mostra como
+Projeto acadêmico. Mostra como
 um **harness** (instruções, regras arquiteturais executáveis e um comando de
 validação) guia um agente de IA em um backend **orientado a eventos** escrito em
 TypeScript + RxJS, e **mede** o que muda com e sem harness.
@@ -37,7 +37,7 @@ tudo que fica em volta do agente para impedir isso:
 
 ## Conceito: programação reativa
 
-Base: slides "Paradigma orientado a eventos" (UFAL).
+Base teórica: slides sobre programação reativa e paradigma orientado a eventos.
 
 **Imperativo ("este muda esse")**: o Carrinho chama `fatura.atualiza()`. O Carrinho
 precisa saber quem depende dele.
