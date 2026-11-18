@@ -86,6 +86,20 @@ export default tseslint.config(
       ],
     },
   },
+  // R7: domain events are immutable facts. Every property must be readonly.
+  {
+    files: ["src/shared/events*.ts"],
+    rules: {
+      "no-restricted-syntax": [
+        "error",
+        {
+          selector: "TSInterfaceBody > TSPropertySignature[readonly!=true]",
+          message:
+            "R7: event properties must be readonly. Events are immutable facts ('readonly campo: tipo').",
+        },
+      ],
+    },
+  },
   // Tests may use whatever they need to observe streams.
   {
     files: ["tests/**/*.ts"],

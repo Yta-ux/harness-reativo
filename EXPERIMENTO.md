@@ -5,7 +5,7 @@ Mesma feature, mesmo prompt, mesmo modelo, duas variantes:
 | Variante | Pasta | O que tem |
 |----------|-------|-----------|
 | **Sem harness** | `baseline/` | código seed + tsconfig + vitest. Nada mais. |
-| **Com harness** | `harness/` | seed + `AGENTS.md`, `docs/`, ESLint (R3,R4,R5,R8), dependency-cruiser (R1,R2,R6), `pnpm validate` |
+| **Com harness** | `harness/` | seed + `AGENTS.md`, `docs/`, ESLint (R3,R4,R5,R7,R8), dependency-cruiser (R1,R2,R6), `pnpm validate` |
 
 Nada é compartilhado entre as duas apps (package.json, lockfile, node_modules próprios).
 O único arquivo comum é o **árbitro** (`tools/`), que mede as duas igualmente.

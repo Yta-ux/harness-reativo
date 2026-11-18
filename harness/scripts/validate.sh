@@ -12,7 +12,7 @@ run() {
 }
 
 run "typecheck (tsc strict)" pnpm exec tsc --noEmit
-run "lint (reactive rules R3,R4,R5,R8)" pnpm exec eslint src tests --max-warnings 0
+run "lint (reactive rules R3,R4,R5,R7,R8)" pnpm exec eslint src tests --max-warnings 0
 run "architecture (boundaries R1,R2,R6)" pnpm exec depcruise src --config .dependency-cruiser.cjs
 run "tests (vitest)" pnpm exec vitest run
 
